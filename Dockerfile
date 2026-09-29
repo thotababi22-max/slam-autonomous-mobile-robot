@@ -1,5 +1,6 @@
-FROM cyberbotics/webots:R2025a
+FROM cyberbotics/webots.cloud:R2025a-ubuntu22.04
 
-WORKDIR /project
+ARG PROJECT_PATH
+RUN mkdir -p $PROJECT_PATH
 
-COPY . /project
+COPY . $PROJECT_PATH
